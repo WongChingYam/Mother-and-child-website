@@ -1,0 +1,397 @@
+html,body,ul,li,p,h1,h2,h3,aside,section,article{
+    margin: 0;
+    padding:0;
+}
+img{
+    border: 0;
+}
+a{
+    text-decoration:none;
+}
+li{
+    list-style: none;
+}
+i,em{
+    font-style:normal;
+}
+input,button{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+body{
+    background: #ececec;
+}
+/*logo标志*/
+#logo{
+    width: 1000px;
+    height:80px;
+    margin:0 auto;
+}
+#logo a{
+    display: block;
+    width: 150px;
+    height: 56px;
+    margin-top:24px;
+}
+
+/*导航*/
+nav {
+    width:100%;
+    height: 42px;
+}
+nav ul{
+    width:760px;
+    margin:0 auto;
+    height:40px;
+    border-bottom: 1px #d4d4d4 solid;
+    padding-left:240px;
+}
+nav ul li{
+    width:240px;
+    height:40px;
+    line-height: 40px;
+    text-align:center;
+    box-sizing: border-box;
+    background:#f8f8f8;
+    float:left;
+    border: 1px solid #d4d4d4;
+    border-bottom: 0;
+    margin: 0 auto;
+    margin-left: 30px;
+}
+nav ul li a{
+    color:#939393;
+    font-size: 14px;
+}  
+nav .select{
+    background:#ffffff;
+    border-top:3px solid #f74f66;
+    margin-top:1px;color: #f74f66;
+    height: 41px;
+}
+/*注册界面*/
+section{
+    width:1000px;
+    height: 500px;
+    margin:0 auto;
+    box-sizing:border-box;
+    position: relative;
+    font-size: 12px;
+} 
+section article{
+    float:left;
+    padding: 40px 10px 10px;
+}        
+section div{
+    position:relative;
+    width:1000px;
+    height:450px;
+}  
+#zhuce{
+    position: absolute;
+    background: #FFF;
+    border: 1px solid #d4d4d4;
+    z-index: 2;
+    border-top: 0;
+}
+section #zhuce  ul{
+    display: flex;
+    width:500px;
+    line-height: 300px;
+    margin:30px;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: baseline;
+    justify-content: center;
+}
+section #zhuce  ul li{
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    width:500px;
+    font-size: 12px;
+    display: flex;
+    margin-bottom:28px;
+    position: relative;
+}  
+section #zhuce  ul li input{
+    padding-left: 5px;
+}
+section #zhuce  ul li p:nth-child(1){
+    width:100px;
+    height:36px;
+    text-align: right;
+}  
+section #zhuce  ul li p:nth-child(2){
+    width:274px;
+    height:33px;
+    border: 1px solid #c2c2c2;
+    display: flex;
+    position: relative;
+} 
+section #zhuce  ul li p:nth-child(2) i{
+    position: absolute;
+    left:250px;
+}
+section #zhuce  ul li p  input {
+    display: block;
+    border: 0;
+    width:274px;
+}
+section #zhuce  ul li p #vf0,section #zhuce  ul li p #btn-duan{
+    width:114px;
+}
+section #zhuce  ul li #pwd{
+    position: relative;
+}
+section #zhuce  ul li  #vf1{
+    width:80px;
+    margin-left: 10px;
+    border: 1px solid #c9c9c9;
+    height:30px;
+    font-size: 18px;
+    padding-left:20px;
+    margin-right: 5px;
+    letter-spacing: 5px; 
+}
+section #zhuce ul li span{
+    margin:0;
+}
+section #zhuce .registerNotice1 {
+    color: #666;
+    background: snow;
+    height: 22px;
+    width: auto;
+    line-height: 20px;
+    border: 1px solid #ffbdbf;
+    padding: 0 6px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 90px;
+    top: -33px;
+    font-size: 12px;
+}
+section #zhuce .rownotice, section #zhuce .rownotice1 {
+    display: block;
+    width: 14px;
+    height: 8px;
+    position: absolute;
+    z-index: 133;
+    top: 15px;
+    left: 20px;
+}
+section #zhuce  ul li:nth-child(4) p:nth-child(2){
+    width:120px;
+}
+section #zhuce  ul li:nth-child(4) span{
+    border:0;
+    background:#fff;
+    color: #0086B3;
+    cursor: pointer;
+}
+section #zhuce  ul li:nth-child(5) p:nth-child(2){
+    width:150px;
+    margin-right: 20px;
+}
+section #zhuce  ul li:nth-child(5) p:nth-child(2) input{
+    width:150px;
+    border: 1px solid #C2C2C2;
+}
+section #zhuce  ul li:nth-child(5)  button{
+    width:120px;
+    height:28px;
+    border: 1px solid #f74f66;
+    color: #f74f66;
+    background:#ffecb2;
+}
+/*注册界面下面提交*/
+section span{
+    margin:30px 0 0 124px;
+    display: block;
+}
+/*section span p{
+    margin-bottom:5px;
+    font-size: 12px;
+}*/
+section span #sub{
+    display: block;
+    margin-bottom: 20px;
+    width:227px;
+    height:39px;
+    line-height: 39px;
+    text-align: center;
+    background:#f74f66;
+    margin-left: 20px;
+    color:#fff;
+    font-size: 14px;
+    border-radius: 2px;
+}
+section #zhuce .invest{
+    margin-top:50px;
+    width:350px;
+    height:310px;
+    float:left;
+    font-size: 12px;
+}
+section #zhuce .invest .top .title{
+    width:350px;    
+    height:20px;
+    color: #bc0e5e;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+section #zhuce .invest .top{
+    width:350px;    
+    height: 60px;
+}
+section #zhuce .invest .top .status{
+    width: 175px;
+    height: 18px;
+    float:left;
+}
+section #zhuce .invest .bottom{
+    width:350px;    
+    height: 100px;
+    display: none;
+}
+section #zhuce .invest .bottom .sex{
+    margin-top: 10px;
+    height: 18px;   
+    width:350px;     
+}
+section #zhuce .invest .bottom .sex div{
+    float: left;
+}
+section #zhuce .invest .bottom .sex .x{
+    width: 88px;
+    height: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+section #zhuce .invest .bottom .sex .sex1{
+    width: 74px;
+    height: 18px;
+    text-align: right;
+}
+section #zhuce .invest .bottom .sex .sex2{
+    width: 74px;
+    height: 18px;
+    text-align: right;
+}
+section #zhuce .invest .bottom .sex .sex3{
+    width: 74px;
+    height: 18px;
+    text-align: right;
+}
+section #zhuce .invest .bottom .birthday{
+    margin-top: 18px;
+    height: 58px;    
+    width:350px;    
+}
+section #zhuce .invest .bottom .birth{
+    width:116px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 600;        
+    float: left;   
+}
+section #zhuce .invest .bottom .date{
+    width: 232px;
+    height: 40px;
+    text-align: right; 
+    padding-right: 40px;
+    box-sizing: border-box;       
+    float: left;   
+}
+section #zhuce .invest .bottom .date select{
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 0 6px;
+    width: auto;
+}
+
+/*登录界面*/
+#denglu{
+    position: absolute;
+    background: #FFF;
+    border: 1px solid #d4d4d4;
+    z-index: 1;
+    border-top: 0;
+}
+#denglu .all{
+    width: 600px;
+    height: 300px;
+    margin-left: 300px;
+    margin-top:100px;
+}
+#denglu .all ul{
+    width:380px;
+    height:140px;
+}
+#denglu .all ul li{
+    display: flex;
+    margin:46px 0;
+    position: relative;
+}
+#denglu .all ul li em{
+    display: block;
+    width:100px;
+    text-align: right;
+    height: 34px;
+    line-height: 34px;
+}
+#denglu .all ul li p:nth-of-type(1){
+    width:270px;
+    height:34px;
+    line-height: 32px;
+    border: 1px solid #C2C2C2;  
+}
+#denglu .all ul li p input{
+    width:250px;
+    height:32px;
+    border: 0;
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+section #denglu .all ul li .registerNotice1 {
+    color: #666;
+    background: snow;
+    height: 22px;
+    width: auto;
+    line-height: 20px;
+    border: 1px solid #ffbdbf;
+    padding: 0 6px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 90px;
+    top: -33px;
+    font-size: 12px;
+}
+section #denglu .all ul li .tipcon{
+    margin: 0;
+}
+section #denglu .all ul li .rownotice{
+    display: block;
+    width: 14px;
+    height: 8px;
+    margin: 0;
+    position: absolute;
+    z-index: 133;
+    top: 15px;
+    left: 20px;
+}
+#denglu .all span{
+    margin-left: 95px;
+}
+#denglu .all span #sub1{
+    margin:20px 0px;
+    width:227px;
+    height:39px;
+    background:#f74f66;
+    color: #FFF;
+}

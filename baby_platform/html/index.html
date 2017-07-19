@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>母婴网后台管理</title>
+  <link href="../lib/bootstrapCss/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/bootstrapJs/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../lib/template/template-web.js"></script>
+  <script type="text/javascript" src="../lib/cookie/jquery.cookie.js"></script>
+  <script src="../js/index.js"></script>
+  
+</head>
+<body>
+     <nav>
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <h1>母婴网管理系统</h1>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" id="search_text">
+              </div>
+              <a href="javaScript:void(0);" class="btn btn-default" id="search">全站搜素</a>
+            </form>
+            <ul class=" navbar-right">
+              <li><a href="javaScript:void(0);">欢迎：<span id="number">wzx</span></a></li>
+              <li><a href="javaScript:void(0);" id="exits">退出</a></li>
+            </ul>
+          </div>
+        </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="col-md-2">
+      <ul class="nav nav-pills nav-stacked" id="list">
+        <li role="presentation" class="active"><a href="javaScript:void(0);" >商品管理</a></li>
+        <li role="presentation"><a href="javaScript:void(0);">每日上新商品</a></li>
+        <li role="presentation"><a href="javaScript:void(0);">用户管理</a></li>
+        <!--<li role="presentation"><a href="javaScript:void(0);">消息列表</a></li>-->
+      </ul>
+    </div>
+    <div class="col-md-10 list">
+
+    </div>
+  </div>
+  <!--商品显示模板-->
+  <script type="text/html" id="product_template"> 
+    <h2>
+        <span><a href="javaScript:void(0);" data-toggle="modal" data-target="#myModal"></a></span>
+        <span><a href="javaScript:void(0);" id="delete"></a></span>
+    </h2>
+    <table class="table table-bordered">
+      <thead>
+           <tr>
+             <th><input type="checkbox"> 全选</th>
+             <th>商品编号</th>
+             <th>商品名称</th>
+             <th>商品价格</th>
+             <th>商品图片</th>
+             <th>商品尺寸</th>
+             <th>商品颜色</th>
+             <th>库存</th>
+             <th>修改</th>
+           </tr>
+        </thead>
+      <tbody>
+      <% for(var i=products.length-1;i>=0;i--) { var p = products[i],imgs=p.product_img.split("&");%>
+          <tr>
+             <td><input type="checkbox"></td>
+             <td><%=p.product_id%></td>
+             <td><%=p.product_name%></td>
+             <td><%=p.product_price%></td>
+             <td><img src="http://localhost/baby/<%=imgs[0]%>" style="width:50px;height:50px;"></td>
+             <td><%=p.product_size%></td>
+             <td><%=p.product_color%></td>
+             <td><%=p.product_storage%></td>
+             <td><img src="../img/xg.png" id="xg"></td>
+           </tr>
+      <% } %>
+      </tbody>
+    </table>
+  </script>
+
+  <!--今日上新商品模板-->
+  <script type="text/html" id="today_template"> 
+    <h2>
+        <span><a href="javaScript:void(0);" data-toggle="modal1" data-target="#myModal1"></a></span>
+        <span><a href="javaScript:void(0);" id="delete1"></a></span>
+    </h2>
+    <table class="table table-bordered">
+      <thead>
+           <tr>
+             <th><input type="checkbox"> 全选</th>
+             <th>商品编号</th>
+             <th>商品名称</th>
+             <th>商品类型</th>
+             <th>商品价格</th>
+             <th>商品图片</th>
+             <th>商品尺寸</th>
+             <th>商品颜色</th>
+             <th>库存</th>
+             <th>修改</th>
+           </tr>
+        </thead>
+      <tbody>
+      <% for(var i=products.length-1;i>=0;i--) { var p = products[i],imgs=p.product_img.split("&");%>
+          <tr>
+             <td><input type="checkbox"></td>
+             <td><%=p.product_id%></td>
+             <td><%=p.product_name%></td>
+             <td><%=p.kind%></td>
+             <td><%=p.product_price%></td>
+             <td><img src="http://localhost/baby/<%=imgs[0]%>" style="width:50px;height:50px;"></td>
+             <td><%=p.product_size%></td>
+             <td><%=p.product_color%></td>
+             <td><%=p.product_storage%></td>
+             <td><img src="../img/xg.png" id="xg"></td>
+           </tr>
+      <% } %>
+      </tbody>
+    </table>
+  </script>
+
+  <!--用户信息模板-->
+  <script type="text/html" id="users_template"> 
+    <h2>
+        <span><a href="javaScript:void(0);" data-toggle="modal2" data-target="#myModal2"></a></span>
+        <span><a href="javaScript:void(0);" id="delete2"></a></span>
+    </h2>
+    <table class="table table-bordered">
+      <thead>
+           <tr>
+             <th><input type="checkbox"> 全选</th>
+             <th>手机号</th>
+             <th>密码</th>
+             <th>孩子性别</th>
+             <th>孩子出生日期</th>
+           </tr>
+        </thead>
+      <tbody>
+      <% for(var i=0;i<users.length;i++) { var p = users[i];%>
+          <tr>
+             <td><input type="checkbox"></td>
+             <td><%=p.phone%></td>
+             <td><%=p.password%></td>
+             <td><%=p.b_sex%></td>
+             <td><%=p.b_birth%></td>
+           </tr>
+      <% } %>
+      </tbody>
+    </table>
+  </script>
+
+  <!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					添加商品
+				</h4>
+			</div>
+			<div class="modal-body">
+          <div class="form-group">
+            <label for="product_id" class="control-label">商品编号:</label>
+            <input type="text" class="form-control" id="product_id">
+          </div>
+          <div class="form-group">
+            <label for="product_name" class="control-label">商品名称:</label>
+            <input type="text" class="form-control" id="product_name">
+          </div>
+          <div class="form-group">
+            <label for="type" class="control-label">商品类型:</label>
+            <select class="form-control" id="sel"></select>
+            <!--<input type="text" class="form-control" id="product_name">-->
+          </div>
+          <div class="form-group">
+            <label for="product_img" class="control-label">商品小图片:</label>
+            <input type="file" id="product_img">
+            <a href="javaScript:void(0);" class="btn btn-default btn-defalut active" role="button" id="upfile">上传</a>
+            <div id="img1"></div>
+          </div>
+          <div class="form-group">
+            <label for="product_img1" class="control-label">商品大图片:</label>
+            <input type="file" id="product_img1">
+            <a href="javaScript:void(0);" class="btn btn-default btn-defalut active" role="button" id="upfile1">上传</a>
+            <div id="img2"></div>
+          </div>
+          <div class="form-group">
+            <label for="product_info" class="control-label">商品介绍:</label>
+            <textarea class="form-control" id="product_info"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="product_price" class="control-label">商品价格:</label>
+            <input type="text" class="form-control" id="product_price">
+          </div>
+          <div class="form-group">
+            <label for="product_color" class="control-label">商品颜色:</label>
+            <input type="text" class="form-control" id="product_color">
+          </div>
+          <div class="form-group">
+            <label for="product_size" class="control-label">商品尺寸:(如：S&M&L&XL，注:以&隔开各个尺寸)</label>
+            <input type="text" class="form-control" id="product_size">
+          </div>
+          <div class="form-group">
+            <label class="control-label">适合年龄:</label>
+            <input type="radio" id="fit_age1" name="fit_age">
+            <label for="fit_age1" class="control-label">0-6个月</label>
+            <input type="radio" id="fit_age2" name="fit_age">
+            <label for="fit_age2" class="control-label">6-12个月</label>
+            <input type="radio"  id="fit_age3" name="fit_age">
+            <label for="fit_age3" class="control-label">1-3岁</label>
+            <input type="radio"  id="fit_age4" name="fit_age">
+            <label for="fit_age4" class="control-label">3-6岁</label>
+            <input type="radio"  id="fit_age5" name="fit_age">
+            <label for="fit_age5" class="control-label">6-9岁</label>
+            <input type="radio" id="fit_age6" name="fit_age">
+            <label for="fit_age6" class="control-label">9-12岁</label>
+          </div>
+          <div class="form-group">
+            <label class="control-label">是否罐装套卖:</label>
+            <input type="radio"  id="gz1" name="gz">
+            <label for="gz1" class="control-label">是</label>
+            <input type="radio" id="gz2" name="gz">
+            <label for="gz2" class="control-label">否</label>
+          </div>
+          <div class="form-group">
+            <label for="sale_amount" class="control-label">罐装套卖数量(整数):</label>
+            <input type="text" class="form-control" id="sale_amount">
+          </div>
+          <!--<div class="form-group">
+            <label for="product_param" class="control-label">商品参数:</label>
+            <textarea class="form-control" id="product_param"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="product_sizeInfo" class="control-label">商品尺寸详情:</label>
+            <textarea class="form-control" id="product_sizeInfo"></textarea>
+          </div>-->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">
+					关闭
+				</button>
+				<button type="button" class="btn btn-primary"  id="add">
+					提交信息
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/html" id="type_template">   
+      <% for(var i=0;i<kinds.length;i++) { var k = kinds[i];%>
+          <option title="<%=k.id%>"><%=k.kind%></option>
+      <% } %>
+  </script>
+
+
+<script>
+   $(function () { $('#myModal').modal('hide')});
+</script>
+<script>
+  //关闭模态框，清空信息
+   $(function () { 
+      $('#myModal').on('hide.bs.modal', function () {
+          $(".modal-body input").val("");
+      });
+   })
+</script>
+</body>
+</html>

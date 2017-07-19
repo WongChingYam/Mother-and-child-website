@@ -1,0 +1,176 @@
+body{
+	background: white;
+}
+#containerbox{
+	width:100%;
+	background: #fff;
+}
+#container{
+	width:1080px;
+	height: auto;
+	margin:0 auto;
+	padding-top:30px;
+}
+#container .sort{
+	width: 100%;
+	height:140px;
+	border:1px solid #ececec;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-top:20px;
+}
+#container .sort p{
+	color:#666666;
+	font-size: 12px;
+}
+#container .sort p a{
+	margin-left: 27px;
+	color:#777777;
+}
+#container .sort p a:hover{
+	color:#ff5482;
+}
+#container .sort ul{
+	margin-top:30px;
+	font-size: 12px;
+	color:#666;
+}
+#container .sort ul li{
+	float:left;
+}
+#container .sort ul .more{
+	position: relative;
+	top:-15px;
+	left: -8px;
+}
+#container .sort ul .more a:hover span{
+	color:#ff5482;
+}
+#container .sort ul .more span i{
+	margin-top:5px;
+	font-size: 15px;
+}
+#container .sort ul li a{
+	text-align: center;
+	line-height:54px;
+	display: block;
+	width:100px;
+	height: 54px;
+	border: 1px solid #ececec;
+	border-right:1px solid white;
+	position: relative;
+	/*background-size:80% 80%;*/
+}
+#container .sort ul li a img{
+	height: 80%;
+	position: absolute;
+	top:7px;
+	left: 9px;
+}
+#container .sort ul li a span{
+	color:#666;
+	display: none;
+}
+#container .sort ul li:nth-child(2) a{
+	margin-left: 20px;
+}
+#container .sort ul li:nth-child(10) a{
+	border-right: 1px solid #ececec;
+}
+#container .sort ul li:nth-child(11){
+	width:90px;
+	height: 54px;
+	border:0;
+}
+#container .sort ul li:nth-child(11) a{
+	border:0;
+}
+#container .sort ul li:nth-child(11) a span{
+	display: block;
+	margin-left: 28px;
+}
+#shopping ul{
+	width:100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+#shopping ul li a{
+	font-size: 12px;
+	color:#666;
+	display: block;
+	width:255px;
+	height: 334px;
+	border: 1px solid #eeeeee;
+	margin-top:20px;
+}
+#shopping ul li a:hover{
+	border:1px solid #ff4965;
+}
+#shopping ul li a img{
+	width:254px;
+}
+#shopping ul li a .num{
+	box-sizing: border-box;
+	width:100%;
+	height: 64px;
+	margin-top:10px;
+	padding:0 10px 14px 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#shopping ul li a .num .title{
+	white-space: nowrap;
+}
+#shopping ul li a .num p{
+	margin-top:15px;
+}
+#shopping ul li a .num p .span1{
+	font-size: 14px;
+	color:#ff4965;
+}
+#shopping ul li a .num p .span2{
+	font-size: 26px;
+	font-weight: bold;
+	color:#ff4965;
+}
+#shopping ul li a .num p .span3{
+	font-size: 16px;
+	font-weight: bold;
+	color:#ff4965;
+}
+
+#page{
+	width:570px;
+	height: 50px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#page a{
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align:center;
+	border:1px solid #ccc;
+	border-radius: 50%;
+	font-size:12px;
+	color:#666;
+}
+#page a:nth-child(1){
+	background: #ff5482;
+}
+#page a:nth-child(8){
+	width:44px;
+	border-radius: 16px;
+}#page a:nth-child(9){
+	width:66px;
+	border-radius: 24px;
+}
+#page a:hover{
+	border:1px solid #ff5482;
+}

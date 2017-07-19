@@ -1,0 +1,266 @@
+html,body,p,ul,li,h5,h1,h2,h3,h4,h6{
+    margin:0;
+    padding:0;
+}
+a{text-decoration:none;}
+li{list-style: none;}
+b,strong{font-weight: normal;}
+i,em{font-style: normal;}
+
+#contentbox{
+    width: 100%;
+    background: url(../img/bg.png) top no-repeat;
+}
+#contentbox{
+    width:100%;
+    background: #f9f9f9;
+}
+.sansui{
+	height: 48px;
+	width: 1080px;
+	margin: 0 auto;
+	font-size:12px ;
+	color: gray;
+	line-height: 48px;
+	text-indent: 10px;
+}
+.sansui a{
+	text-decoration: none;
+	color: gray;
+}
+.pinpai{
+	width: 1078px;
+	height: 50px;
+	border: solid 1px lightgrey;
+	margin: 0 auto;
+	margin-bottom: 20px;
+    background:#fff;
+}
+.pinpai i{
+	float: left;
+	line-height: 50px;
+	color: darkgray;
+	text-indent: 10px;
+	font-size: 14px;
+}
+.pinpai ul{
+	float: left;
+}
+.pinpai ul li{
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	line-height: 50px;
+	padding-right: 50px;
+}
+.pinpai ul li a{
+	font-size: 14px;
+	color: gray;
+}
+.pinpai ul li a:hover{
+	color: #ff647c;
+	text-decoration: underline;
+}
+.pinpai strong a{
+	float: right;
+	line-height: 50px;
+	color: gray;
+	font-size: 14px;
+}
+.fenlei{
+	width: 1080px;
+	margin: 0 auto;
+}
+.fenleileft{
+	width: 804px;
+	float: left;
+}
+.fenleiright{
+	width: 250px;
+	float: right;
+}
+.clear1{
+	clear: both;
+}
+.qiutong{
+	width: 802px;
+	height: 352px;
+	border: solid 1px lightgray;
+	margin-bottom: 30px;
+    background:#fff;
+}
+.qiutop{
+	width: 762px;
+	height: 50px;
+	margin: 20px;
+}
+.touxiang{
+	width: 50px;
+	height: 50px;
+	border: solid 1px lightgrey;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.touxiang img{
+	width: 50px;
+	height: 50px;
+}
+.touxiang,.xinxi{
+	float: left;
+	color: gray;
+}
+.zhekou{
+	margin-top: 8px;
+	float: right;
+	width: 85px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	color: #ff4865;
+	border: 1px solid #ffb6c1;
+	border-radius: 15px;
+}
+.qiuimg{
+	width: 762px;
+	height: 250px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between;
+}
+.qiuimg div{
+	width: 168px;
+	height: 168px;
+}
+.qiuimg div span{
+	font-size: 12px;
+	color: #ff4965;
+}
+.qiuimg div b{
+	font-size: 16px;
+	color: #ff4965;
+}
+.qiuimg div i{
+	font-size: 12px;
+	color: darkgrey;
+	text-decoration:line-through;
+}
+.qiuimg div p{
+	font-size: 14px;
+	color: gray;
+}
+.qiuimg img{
+	width: 168px;
+	height: 168px;
+}
+.qiuimg img:hover{
+	opacity: 0.8;
+}
+.yugao{
+	width: 248px;
+	height: 354px;
+	border: 1px solid gainsboro;
+	display: flex;
+	flex-direction: column;
+    background: #FFF;
+}
+.yugao .ytop{
+	height: 39px;
+	line-height: 39px;
+	background: #f8f8f8;
+}
+.ytop a{
+	text-decoration: none;
+	color: gray;
+	font-size: 16px;
+}
+.logos{
+	height: 354px;
+	display: flex;
+	flex-direction: column;
+}
+.logos div{
+	width: 248px;
+	height: 57px;
+}
+.logos div a{
+    display:inline-block;
+    width: 122px;
+    height: 55px;
+    border-right: 1px dashed #f1f1f1;
+    border-bottom: 1px dashed #f1f1f1;
+}
+.logos div img{
+	width: 80px;
+	height: 40px;
+    padding: 8px 22px;
+}
+.yugao .ybottom{
+	width: 248px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.ybottom a{
+	color: grey;
+    font-size:14px;
+}
+.topten ul li{
+	list-style: none;
+	width: 248px;
+	height: 60px;
+	border: 1px solid gainsboro;
+	position: relative;
+}
+.topten ul li:hover{
+	height: 112px;
+	border: 1px solid red;
+}
+.tpleft{
+	float: left;
+	width: 110px;
+	height: 60px;
+}
+.tpright{
+	float: right;
+	font-size: 14px;
+	color: gray;
+}
+.topten h4{
+	line-height: 40px;
+    color: #666;
+    font-weight:normal;
+    padding-left: 28px;
+    padding-top:8px;
+    box-sizing:border-box;
+}
+.tpright h4{
+	width: 138px;
+	color: #ff5482;
+	font-weight: normal;
+}
+.tpleft img{
+	width: 110px;
+	height: 60px;
+}
+.tpbottom{
+	width: 138px;
+	height: 50px;
+	position: absolute;
+	right: 0;
+	top:62px;
+	display: none;
+	font-size: 14px;
+}
+.tpbottom h6,.tpbottom span{
+	font-size:14px ;
+	font-weight: normal;
+	color: lightgray;
+}
+.topten ul li:hover .tpbottom{
+	display: block;
+}
+
+
+
+

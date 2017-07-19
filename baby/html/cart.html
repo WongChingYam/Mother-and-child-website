@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/cart.css">         
+
+    <!--<script src="../js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/template-web.js"></script>-->
+    <script src="../lib/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../lib/cookie/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../lib/template/template-web.js"></script>
+    <script src="../js/common.js"></script>    
+    <script src="../js/cart.js"></script>    
+</head>
+<body>
+    <div id="headerbox">
+        <header>
+            <ul>
+                <li>你好，欢迎来到母婴之家！</li>
+                <li><a href="zhuce.html#denglu">登录</a></li>
+                <li><a href="zhuce.html">免费注册</a></li>
+                <li><a href="">帮助中心</a></li>            
+            </ul>
+        </header>
+    </div>
+
+    <div id="topbox">
+        <div id="top">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo.png"></a>
+            </div>
+            <div class="top_right">
+                <ul class="step step1">
+                    <li class="current">1.我的购物车</li>
+                    <li>2.填写核对订单信息</li>
+                    <li>3.成功提交订单</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contentbox">
+        <div id="empty" style="display:none;">
+            <p class="word">您还没有为您可爱的宝宝挑选任何商品哦~</p>
+            <a href="../index.html">前往选购</a>
+        </div>
+        <div id="content" >
+            <div class="c_title">
+                <span>我的购物车</span>
+            </div>
+            <div class="c_menu">
+                <div class="ci ci0 ">
+                    <div class="inputwarp checked">
+                        <input class="mckall" type="checkbox">
+                    </div>
+                    <label>全选</label>
+                </div>
+                <div class="ci ci1">商品</div>
+                <div class="ci ci2">颜色</div>                
+                <div class="ci ci3">尺寸</div>
+                <div class="ci ci4">单价</div>
+                <div class="ci ci5">数量</div>
+                <div class="ci ci6">小计</div>
+                <div class="ci ci7">操作</div>
+            </div>
+
+            <div class="c_count">
+                <span>合计：</span>
+                <label>¥<em>282.00</em></label>
+            </div>
+            <a href="javaScript:void(0);" class="btn">去结算</a>
+        </div>
+    </div>
+
+    <!-- 底部开始 -->
+    <div class="bottom">
+		<div class="bottom1">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="">关于母婴之家</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">正品保障</a></li>
+				<li><a href="">关于母婴之家</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">正品保障</a></li>
+                <li><a href="">关于母婴之家</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">正品保障</a></li>
+			</ul>
+		</div>
+		<p>&copy;2017 母婴之家 All Rights Reserved. 客服热线：1010-8080</p>
+	</div>
+    <!-- 底部结束 -->
+    
+    <!-- 使用 artTemplate，定义显示购物车商品信息的模板 -->
+    <script type="text/html" id="product_template">
+        <% for(var i = 0; i < products.length; i++) { var p = products[i]; %>
+            <div class="c_list">
+                    <div class="it_mck checked">
+                        <input name="productcheck" class="mck" type="checkbox" checked="">
+                    </div>
+                    <div class="c_img">
+                        <a href="<%=p.src%>" target="_blank"><img src="<%=p.img%>"></a>
+                    </div>
+                    <div class="c_info">
+                        <% if(p.tz == 1) {%>
+                            <div class="tz">
+                                <img src="../img/btn_tz.png">
+                            </div>
+                        <% } %>
+                        <p class="g_name">
+                            <a href="<%=p.src%>" target="_blank"> <%=p.name%></a>
+                        </p>
+                        <p class="g_no">商品编号：<%=p.id%></p>
+                    </div>
+                    <div class="c_color"><%=p.color%></div>                
+                    <div class="c_size"><%=p.size%></div>
+                    <div class="c_price"><%=p.price%></div>
+                    <div class="c_num">
+                        <span class="reduce disabled"></span>
+                        <input type="text" value="<%=p.amount%>" class="g_num" readonly>
+                        <span class="add"></span>
+                    </div>
+                    <div class="c_total"> ¥<em><%=p.amount*p.price%></em></div>
+                    <div class="c_operate">
+                        <a href="javaScript:void(0);" title="<%=i%>">删除</a>
+                    </div>
+                </div>
+        <% } %>            
+    </script>
+
+</body>
+</html>

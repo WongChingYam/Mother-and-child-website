@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>母婴网</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">      
+    <link rel="stylesheet" type="text/css" href="css/common.css">    
+    
+    <script src="js/tools.js"></script>
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="lib/cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="lib/template/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+     
+</head>
+<body>
+
+    <!--<iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="html/common.html" height=200px width=100%></iframe>-->
+    <!--顶部模块-->
+    <div id="headerbox">
+        <header>
+            <ul>
+                <li>你好，欢迎来到母婴之家！</li>
+                <li><a href="html/zhuce.html#denglu">登录</a></li>
+                <li><a href="html/zhuce.html">免费注册</a></li>
+                <li><a href="">帮助中心</a></li>            
+            </ul>
+        </header>
+    </div>
+
+    <div id="topbox">
+        <div id="top">
+            <div class="logo">
+                <a href=""><img src="img/logo.png"></a>
+            </div>
+            <div class="top_right">
+                <div class="search">
+                    <form>
+                        <input type="text" placeholder="搜索 母婴之家 商品/品牌" id="look">
+                        <a href="javaScript:void(0);" id="sear"><i class="iconfont icon-fangdajing"></i></a>
+                    </form>
+                    <div class="searchInfo">
+                        <ul> 
+                            <!--<li>1</li>
+                            <li>2</li>-->
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="shoppingCar">
+                    <a href="html/cart.html"><b><i class="iconfont icon-gouwuche"></i></b>我的购物车</a>
+                    <!--<div class="CarInfor">
+                        购物车还没有商品，快去选购吧！
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="navbox">
+        <nav>
+            <ul>
+                <li class="first"><a href="javaScript:void(0)">全部商品分类 <i class="iconfont icon-downjiantou"></i><i class="iconfont icon-xiangshangjiantou"></i></a>
+                    <div class="kind">
+                        <ul class="list">
+                            <li class="current">热销分类</li>
+                            <li>奶粉辅食</li>
+                            <li>纸尿裤</li>
+                            <li>婴儿装</li>
+                            <li>儿童服饰</li>
+                            <li>婴童鞋</li>
+                            <li>哺育喂养</li>                            
+                            <li>孕妈专区</li>                                                     
+                        </ul>
+                        <div class="goods" style="display:block;">
+                            <ul>
+                                <li>
+                                    <a href="html/kind.html"><img src="img/kind3-2.jpg">
+                                    <label>套装</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-2.jpg">
+                                    <label>奶粉</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-3.jpg">
+                                    <label>奶瓶</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind2-1.jpg">
+                                    <label>雀巢</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-2.jpg">
+                                    <label>奶粉</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind2-2.jpg">
+                                    <label>清火奶伴</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind2-1.jpg">
+                                    <label>雀巢</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind2-2.jpg">
+                                    <label>清火奶伴</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind3-1.jpg">
+                                    <label>哈衣趴服</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind3-2.jpg">
+                                    <label>套装</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind3-3.jpg">
+                                    <label>T恤上衣</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind3-4.jpg">
+                                    <label>婴儿外套</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-2.jpg">
+                                    <label>奶粉</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-2.jpg">
+                                    <label>奶粉</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-3.jpg">
+                                    <label>奶瓶</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-3.jpg">
+                                    <label>奶瓶</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind2-1.jpg">
+                                    <label>雀巢</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-2.jpg">
+                                    <label>奶粉</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind2-2.jpg">
+                                    <label>清火奶伴</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind2-1.jpg">
+                                    <label>雀巢</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind2-2.jpg">
+                                    <label>清火奶伴</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind1-1.jpg">
+                                    <label>纸尿裤</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/kind3-1.jpg">
+                                    <label>哈衣趴服</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind3-2.jpg">
+                                    <label>套装</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind3-3.jpg">
+                                    <label>T恤上衣</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/kind3-4.jpg">
+                                    <label>婴儿外套</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="curr"><a href="#">首页</a></li>
+                <li><a href="">奶粉</a></li>
+                <li><a href="">纸尿裤</a></li>         
+                <li><a href="">会员俱乐部</a></li>
+                <li class="last"><a href="javaScript:void(0)">性别年龄 <i class="iconfont icon-downjiantou"></i></a>
+                    <div class="sexAge">
+                        <h5>男孩</h5>
+                        <p>
+                            <a href="html/baby1-3.html">0-1岁</a>
+                            <a href="html/baby1-3.html">1-3岁</a>
+                            <a href="html/baby1-3.html">3-6岁</a>
+                            <a href="html/baby1-3.html">6-9岁</a>
+                            <a href="html/baby1-3.html">9-12岁</a>
+                        </p>
+                        <h5>女孩</h5> 
+                        <p>
+                            <a href="html/baby1-3.html">0-1岁</a>
+                            <a href="html/baby1-3.html">1-3岁</a>
+                            <a href="html/baby1-3.html">3-6岁</a>
+                            <a href="html/baby1-3.html">6-9岁</a>
+                            <a href="html/baby1-3.html">9-12岁</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="contentbox">
+        <!--轮播图模块-->
+        <div id="container">
+            <div class="imgList">
+                <a href=""><img src="img/1.jpg" style="display: block;"></a>
+                <a href=""><img src="img/2.jpg"></a>
+                <a href=""><img src="img/3.jpg"></a>
+            </div>
+            <div class="buttons">
+            </div>
+            <a href="javascript:void(0);" id="prev" class="arrow">&lt;</a>
+            <a href="javascript:void(0);" id="next" class="arrow">&gt;</a>
+        </div>
+        <!--推荐模块-->  
+        <div id="focus">
+            <div class="title">
+                <span>为你推荐</span>
+                <span>千万妈妈 精明之选</span>
+            </div>
+            <div class="tui_jian">
+                <!--<a href="html/kind1-1.html">
+                    <img src="img/kind1-1-4-big.jpg"/>
+                    <div class="g_name">2017夏季新款双鱼儿童T恤短袖套装宝宝纯棉童装薄</div>
+                    <div class="g_price">
+                        ¥<em>42.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/sp7.jpg"/>
+                    <div class="g_name">【两套装4件套】【纯棉】2017新款儿童夏季短袖裤童装男女宝宝婴儿夏装</div>
+                    <div class="g_price">
+                        ¥<em>26.80</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/img1.jpg"/>
+                    <div class="g_name">Aveeno 宝宝燕麦保湿润肤乳浅蓝 227g</div>
+                    <div class="g_price">
+                        ¥<em>58.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/img2.jpg"/>
+                    <div class="g_name">可么多么 comotomo 硅胶奶嘴 流量三滴 适用年龄6个月以上</div>
+                    <div class="g_price">
+                        ¥<em>59.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/img3.jpg"/>
+                    <div class="g_name">hugmii 儿童猴子动物空顶帽 猴子</div>
+                    <div class="g_price">
+                        ¥<em>39.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/block5-3.jpg"/>
+                    <div class="g_name">马克珍妮 Marc&Janie  女宝宝蕾丝公主裙13219</div>
+                    <div class="g_price">
+                        ¥<em>79.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/img1.jpg"/>
+                    <div class="g_name">Aveeno 宝宝燕麦保湿润肤乳浅蓝 227g</div>
+                    <div class="g_price">
+                        ¥<em>58.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/img2.jpg"/>
+                    <div class="g_name">可么多么 comotomo 硅胶奶嘴 流量三滴 适用年龄6个月以上</div>
+                    <div class="g_price">
+                        ¥<em>59.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/block3-1.jpg"/>
+                    <div class="g_name">百伶妈妈 bailingmama 孕妇装夏装花色雪纺薄飘逸露肩连衣裙</div>
+                    <div class="g_price">
+                        ¥<em>129.00</em>
+                    </div>
+                </a>
+                <a href="">
+                    <img src="img/sp7.jpg"/>
+                    <div class="g_name">【两套装4件套】【纯棉】2017新款儿童夏季短袖裤童装男女宝宝婴儿夏装</div>
+                    <div class="g_price">
+                        ¥<em>26.80</em>
+                    </div>
+                </a>-->
+            </div>
+        </div>
+
+        <!--今日特卖模块-->
+        <div id="content">
+            <div class="title">
+                <span>今日特卖</span>
+                <span></span>
+                <span>每天9点准时上新</span>
+            </div>
+            <!--<div class="layout">
+                <div class="block">
+                    <a href="" target="_blank" title="孕妈夏季完美穿搭">
+                        <img src="img/block3.jpg">
+                        <i></i>
+                    </a>
+                    <div class="rank">
+                        <a href="html/block1-1.html">
+                            <span class="rank_img">
+                                <img src="img/block3-1.jpg">
+                                <i></i>
+                            </span>
+                            <div class="r">
+                                <p class="tit">百伶妈妈 bailingmama 孕妇装夏装花色雪纺薄飘逸露肩连衣裙</p>
+                                <div class="price">
+                                    <span class="new">¥<em>129.00</em></span>
+                                    <span class="old">¥<em>699.00</em></span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <span class="rank_img">
+                                <img src="img/block3-2.jpg">
+                                <i id="top2"></i>
+                            </span>
+                            <div class="r">
+                                <p class="tit">女之御 NVZHIYU 2017孕妇装短袖中长款宽松孕妇连衣裙夏</p>
+                                <div class="price">
+                                    <span class="new">¥<em>98.00</em></span>
+                                    <span class="old">¥<em>298.00</em></span>
+                                </div>
+                            </div>
+                        </a>
+                         <a href="">
+                            <span class="rank_img">
+                                <img src="img/block3-3.jpg">
+                                <i id="top3"></i>
+                            </span>
+                            <div class="r">
+                                <p class="tit">欧丽妈咪 Oulimom 孕妇装春夏季新款连衣裙时尚个性宽松潮妈清新百褶连衣裙</p>
+                                <div class="price">
+                                    <span class="new">¥<em>126.00</em></span>
+                                    <span class="old">¥<em>218.00</em></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>-->
+
+        </div> 
+        
+        <div class="bottom"></div>
+    </div>
+    
+    <!--底部模块-->
+    <div class="bottom">
+		<div class="bottom1">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="">关于母婴之家</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">正品保障</a></li>
+				<li><a href="">关于母婴之家</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">正品保障</a></li>
+                <li><a href="">关于母婴之家</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">正品保障</a></li>
+			</ul>
+		</div>
+		<p>&copy;2017 母婴之家 All Rights Reserved. 客服热线：1010-8080</p>
+	</div>
+
+
+    <!--右边导航栏-->
+    <div id="side-panel">
+        <div class="panel">
+            <i class="iconfont icon-gouwuchexin"></i>
+            <div class="panel1">
+                <a href="html/cart.html">购物车</a>
+            </div>
+        </div>
+        <div class="panel">
+            <i class="iconfont icon-shouc01"></i>
+            <div class="panel1">
+                <a href="">收藏</a>
+            </div>
+        </div>
+        <div class="kf">
+            <div class="panel">
+                <i class="iconfont icon-kefu"></i>
+                <div class="panel1">
+                    <a href="">客服</a>
+                </div>
+            </div>
+            <div class="phone"></div>
+        </div>
+        
+        <div class="panel">
+            <i class="iconfont icon-fanhuidingbu"></i>
+            <div class="panel1">
+                <a href="javaScript:void(0);">回到顶部</a>
+            </div>
+        </div>
+    </div> 
+
+    <script type="text/html" id="new_template"> 
+        <% for(var i=0;i<newKind.length;i++){ var kind = newKind[i],p=kind.products;%>
+            <div class="layout">
+                <div class="block">
+                    <a href="html/kind.html " target="_blank" title="<%=kind.kind%>">
+                        <img src="<%=kind.kind_img%>">
+                        <i></i>
+                    </a> 
+                    <div class="rank">
+                        <% for(var j=0;j<p.length;j++){ var imgs = p[j].product_img.split("&")%>
+                            <a href="javaScript:void(0);" class="p_datails">
+                                <div class="p_id" style="display:none;"><%=p[j].product_id%></div>
+                                <span class="rank_img">
+                                    <img src="<%=imgs[0]%>">
+                                    <i></i>
+                                </span>
+                                <div class="r">
+                                    <p class="tit"><%=p[j].product_name%></p>
+                                    <div class="price">
+                                        <span class="new">¥<em><%=p[j].product_price%></em></span>
+                                        <!--<span class="old">¥<em>198.00</em></span>-->
+                                    </div>
+                                </div>
+                            </a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </script>
+
+    <script type="text/html" id="pro_template"> 
+        <% for(var i=1;i<=10;i++){ var p=products[products.length - i],imgs = p.product_img.split("&");%>
+            <a href="javaScript:void(0);" class="pro_details">
+                <img src="<%=imgs[0]%>"/>
+                <div class="g_id" style="display:none;"><%=p.product_id%></div>
+                <div class="g_name"><%=p.product_name%></div>
+                <div class="g_price">
+                    ¥<em><%=p.product_price%></em>
+                </div>
+            </a>
+        <% } %>
+    </script>
+</body>
+</html>

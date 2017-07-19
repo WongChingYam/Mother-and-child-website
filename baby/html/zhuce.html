@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录/注册</title>
+		<link rel="stylesheet" type="text/css" href="../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		
+		<script src="../js/tools.js"></script>		
+		<script src="../lib/jquery/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="../lib/cookie/jquery.cookie.js"></script>
+		<script src="../js/login.js"></script>
+		
+	</head>
+	<body>
+		<div id="logo">
+            <a href="../index.html"><img src="../img/logo.png"></a>
+        </div>
+		<nav>
+			<ul>
+				<li><i class="myfont icon-denglu"> </i> <a href="javaScript:void(0);">注册</a></li>
+				<li><i class="myfont icon-zhuce1"> </i><a href="javaScript:void(0);">登录</a></li>
+			</ul>
+		</nav>
+		<section>
+			<div id="zhuce">
+				<form>
+				   <article>
+						<ul>
+							<li>
+								<p>手机号：</p>
+								<p><input type="tel" placeholder="请输入手机号" required id="phone"/><i class="myfont icon-dianhua"></i></p>
+								<p class="registerNotice1 phone" style="display: none;">
+									<span class="tipcon">请输入正确的手机号码，且为11位纯数字格式</span>
+									<span class="rownotice"><img src="../img/tipnamebg.png"></span>
+								</p>
+							</li>
+							<li>
+								<p>请设置密码：</p>
+								<p><input type="password" placeholder="请填写密码" required id="pwd"/><i class="myfont icon-bi"></i></p>
+								<p class="registerNotice1 password" style="display: none;">
+									<span class="tipcon">长度为6-16个字符，建议使用字母加数字或符号组合</span>
+									<span class="rownotice"><img src="../img/tipnamebg.png"></span>
+								</p>
+							</li>
+							<li>
+								<p>请确认密码：</p>
+								<p><input type="password" placeholder="请再次填写密码" required id="pwd2"/><i class="myfont icon-bi"></i></p>
+								<p class="registerNotice1 password2" style="display: none;">
+									<span class="tipcon">两次输入的密码不一致</span>
+									<span class="rownotice"><img src="../img/tipnamebg.png"></span>
+								</p>
+							</li>
+							<li>
+								<p>验证码：</p>
+								<p><input type="text" id="vf0"></p>
+								<input type="text" id="vf1" readonly='readonly'>看不清楚？<span id="change" >换一张</span>
+								<p class="registerNotice1 vf0" style="display: none;">
+									<span class="tipcon">验证码输入错误</span>
+									<span class="rownotice"><img src="../img/tipnamebg.png"></span>
+								</p>
+							</li>
+							<!--<li><p>短信验证码：</p><p><input type="text"></p><button id="btn-duan">获取短信验证码</button></li>-->
+							
+						</ul>
+					
+						<span>
+							<!--<p><input type="checkbox" /><i>阅读并同意</i><a href="">“母婴之家网站用户协议”</a></p>-->
+							<!--<input type="submit" id="sub" value="提交注册" style="border:0;cursor:pointer;"/>-->
+							<a id="sub" href="javaScript:void(0);">提交注册</a>
+							<!--<p>使用合作网站母婴之家：</p>
+							<p>
+								<a href=""><img src="img/nav00.jpg"></a>
+								<a href=""><img src="img/nav01.jpg"></a>
+								<a href=""><img src="img/nav02.jpg"></a>
+							</p>-->
+						</span>
+				 </article>
+				</form>
+				 <!--<h1> <img src="img/logo01.jpg.jpg"></h1>-->
+				 <div class="invest">
+					 <div class="top">
+						 <div class="title">我们将根据宝宝年龄段，提供独家的干货！</div>
+						 <div class="status">
+                            <input type="radio" name="status" id="born">
+                            <label for="born">已出生</label>
+                        </div>
+						<div class="status">
+                            <input type="radio" name="status" id="unborn">
+                            <label for="unborn">还在路上</label>
+                        </div>
+					 </div>
+					 <div class="bottom">
+                        <div class="sex">
+                            <div class="x">性别:</div>
+                            <div class="sex1">
+                                <input type="radio" name="child" value="男" id="boy">
+                                <label for="boy">男孩</label>
+                            </div>
+
+                            <div class="sex2">
+                                <input type="radio" name="child" value="女" id="girl">
+                                <label for="girl">女孩</label>
+                            </div>
+
+                            <div class="sex3">
+                                <input type="radio" name="child" value="未知" id="dontknow">
+                                <label for="dontknow">未知</label>
+                            </div>
+                        </div>
+
+                        <div class="birthday">
+                            <div class="birth">出生日期:</div>
+                            <div class="date">
+                                <select name="day" id="day">
+                                    <option disabled="" selected="">日</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>             
+                                </select>
+
+                                <select name="month" id="month"> </select>
+
+                                <select name="year" id="year"></select>
+                            </div>
+                        </div>
+                    </div>
+				 </div>
+			</div>
+			<div id="denglu">
+				<div class="all">
+					<ul>
+						<li>
+							<em>账号名：</em>
+							<p><input type="tel" id="phone1" placeholder="请填写邮箱或者手机号码" required /><i class="myfont icon-dianhua"></i></p>
+							<p class="registerNotice1 phone1" style="display: none;">
+								<span class="tipcon">请输入正确的手机号码，且为11位纯数字格式</span>
+								<span class="rownotice"><img src="../img/tipnamebg.png"></span>
+							</p>
+						</li>
+						<li><em>密码：</em><p><input type="password" id="password1" placeholder="请填入密码" required/><i class="myfont icon-bi"></i></p></li>
+					</ul>
+				  	
+				 <span>
+				 	<p><input type="checkbox" id="free"/><label for="free">记住我（7天内免登陆）<a href="">忘记密码?</a></p>
+				 	<input type="submit" name="" id="sub1" value="立即登录" style="border:0;cursor:pointer;"/>
+				 	<!--<p>使用合作网站母婴之家：</p>
+				 	<p>
+				 		<a href=""><img src="img/nav00.jpg"></a>
+				 		<a href=""><img src="img/nav01.jpg"></a>
+				 		<a href=""><img src="img/nav02.jpg"></a>
+				 	</p>-->
+				 </span>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

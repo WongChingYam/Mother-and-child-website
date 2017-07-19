@@ -1,0 +1,341 @@
+#headerbox{
+    background: #f2f2f2;
+}
+#topbox{
+    background: #fff;
+}
+#top .logo{
+    width: 620px;
+}
+#top .top_right{
+    float:left;
+    width: 454px;
+    height: 80px;
+    position: relative;
+     top: 0; 
+     margin-top: 0; 
+}
+#top .top_right .step{
+    background: url(../img/cart_step_fN.png) no-repeat;
+    clear: both;
+    width: 435px;
+    height: 42px;
+    float: right;
+    margin-top: 30px;
+    line-height: 42px;
+}
+#top .top_right .step li{
+    float: left;
+    width: 144px;
+    padding-left: 0;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+}
+#top .top_right .step li.current {
+    color: #fff;
+}
+#top .top_right .step1{
+    background-position: 0 0;
+}
+#top .top_right .step2{
+    background-position: 0 -42px;
+}
+#top .top_right .step3{
+    background-position: 0 -84px;
+}
+
+#contentbox{
+    width: 100%;
+    background: #fff;
+}
+#contentbox #content{
+    width: 1100px;
+    margin:0 auto;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+#content .c_title {
+    border-bottom: 2px solid #eaeaea;
+    border-top: none;
+    padding: 10px 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #666;
+}
+#content .c_title span {
+    border-bottom: 2px solid #fa4b9b;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #333;
+}
+#content .c_menu {
+    padding: 15px;
+    background: #fff;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+}
+#content .c_menu div{
+    float: left;
+}
+#content .c_menu .ci {
+    text-align: center;
+    padding: 2px 0;
+}
+#content .ci0 {
+    width: 87px;
+    text-align: left!important;
+    margin-left: 20px;
+}
+#content .inputwarp.nocheck {
+    background-position: 0 2px;
+}
+#content .inputwarp.checked {
+    background-position: 0 -176px;
+}
+#content .ci0 .inputwarp {
+    top: -4px;
+    position: relative;
+}
+#content .inputwarp {
+    background: url(../img/cart_input.png) repeat-y;
+    width: 23px;
+    height: 22px;
+    display: inline-block;
+    left: 2px;
+}
+#content input {
+    line-height: normal;
+    outline: 0;
+    font-size: 12px;
+}
+#content input.mck, input.mckall {
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-right: 5px;
+    opacity: 0;
+}
+#content .mckall {
+    width: 100%;
+    height: 80%;
+}
+#content .ci1 {
+    width: 290px;
+}
+.ci2, .ci3, .ci4, .ci5, .ci6, .ci7{
+    width: 114px;
+    border-left: 1px solid #ddd;
+}
+.ci2, .ci3{
+    width: 80px;
+}
+#content .c_list {
+    margin: 0 15px 15px;
+    border: 1px solid #ededed;
+    padding: 12px 15px; 
+    color: #666; 
+    font-size: 12px;  
+}
+ #content .c_list:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#content .c_list div{
+    float:left;
+}
+.c_list .it_mck {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    z-index: 2;
+    background: url(../img/cart_input.png) repeat-y;    
+}
+.c_list .it_mck.nocheck {
+    background-position: 8px 20px;
+}
+.c_list .it_mck.checked {
+    background-position: 8px 62px;
+}
+.it_mck .mck {
+    margin-left: 12px;
+    margin-top: 34px;
+}
+.it_mck>input {
+    top: -10px;
+    height: 20px;
+    position: relative;
+}
+.c_list .c_img{
+    width: 77px;
+    height: 77px;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+}
+.c_list .c_img img {
+    width: 77px;
+    height: 77px;
+    vertical-align: top;
+}
+.c_list .c_info{
+    width: 240px;
+    line-height: 16px;
+}
+.c_list .c_info .tz{
+    margin: 3px 3px 0 0;
+}
+.c_list .c_info .g_name{
+    margin-top: 3px;
+    height: 32px;
+    margin-bottom: 6px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.c_list .c_info .g_name a{
+    font-size: 12px;
+    color: #666;
+}
+.c_list .c_info .g_name a:hover {
+    color: #fa4b9b;
+}
+.c_list .c_info .g_no{
+    margin-top: 6px;
+    color: #999;
+}
+.c_list .c_color,.c_list .c_size,.c_list .c_price{
+    color: #999;
+    word-break: break-all;
+    text-align: center;
+    margin-top: 3px;
+    width: 80px;
+}
+.c_list .c_price{
+    color: #666;
+    width: 114px;
+}
+.c_list .c_num{
+    width: 114px;
+    margin-top: 3px;
+    /*text-align: center;*/
+    height: 22px;
+    border: 1px solid #e2e2e2;
+    margin: 0 16px;
+    width: 80px;
+    background-color: #fff;
+}
+.c_list .c_num .reduce{
+    border-right: 1px solid #e2e2e2;
+    width: 22px;
+    cursor: pointer;
+    background: url(../img/jiajian.png) 0 -22px;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+}
+.c_list .c_num .reduce.disabled {
+    background-position: 0 0;
+}
+.c_list .c_num .g_num{
+    text-align: center;
+    width: 34px;
+    overflow: hidden;
+    border: 0;
+    height: 20px;
+    float: left;
+    outline: 0;
+}
+.c_list .c_num .add{
+    float: left;
+    border-left: 1px solid #e2e2e2;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    background: url(../img/jiajian.png);
+    background-position: -22px -22px;
+}
+.c_list .c_total{
+    width: 115px;
+    margin-top: 3px;
+    text-align: center;
+    color: #ff69b4;
+}
+.c_list .c_operate{
+    width: 48px;
+    margin-left: 34px;
+    margin-top: 3px;
+    text-align: center;
+}
+.c_list .c_operate a{
+    color: #666;
+}
+.c_list .c_operate a:hover{
+    color: #ff69b4;
+}
+#content .c_count{
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: bold;
+    text-align: right;
+    width: 950px;
+    line-height: 60px;
+}
+#content .c_count label{
+    font-size: 18px;
+    color: #fa4b9b;   
+}
+#content .btn.disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    border: 1px solid #666;
+}
+#content .btn{
+    display: block;
+    float: right;
+    text-align: center;
+    color: #fff;
+    background-color: #fa4b9b;
+    border: 1px solid #fa4b9b;
+    line-height: 56px;
+    margin-top: 0;
+    margin-right: 15px;
+    padding: 0 19px;
+    font-size: 19.5px;
+    cursor: pointer;
+}
+
+
+/*空购物车时的样式*/
+#contentbox #empty{
+    width: 600px;
+    height: 230px;
+    padding: 80px 50px 80px 410px;
+    background:#fff url(../img/empty_basket.jpg) 22px 30px no-repeat;
+    margin: 0 auto;
+}
+#contentbox #empty .word{
+    font-size: 32px;
+    color: #ccc;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+#contentbox #empty a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    background: #ff7bc2;
+    margin-top:50px;
+    margin-left: 150px;
+    font-size: 20px;
+}
+
+

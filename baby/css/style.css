@@ -1,0 +1,288 @@
+html,body,p,ul,li,h5,h1,h2,h3{
+    margin:0;
+    padding:0;
+}
+#contentbox{
+    width: 100%;
+    background: url(../img/bg.png) top no-repeat;
+    /*height: 100%;*/
+    margin-top:0;
+}
+#container{
+    width:1100px;
+    height:350px;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+}
+#container .imgList{
+    width:100%;
+    height:350px;
+    position:absolute;
+    z-index:1;
+}
+#container .imgList a{
+    display:block;
+    position:absolute;
+}
+#container .imgList a:nth-child(1),#container .imgList a:nth-child(3){
+    left:-400px;
+}
+#container .imgList img{
+    display:none;
+}
+#container .buttons{
+    height: 10px;
+    width: 100px;
+    position:absolute;
+    right:100px;
+    bottom:20px;
+    z-index:2;
+}
+#container .buttons span{
+    float: left;
+    display:block;
+    width:15px;
+    height:15px;
+    margin-right:8px;
+    border-radius:50%;
+    background:#bbb;
+}
+#container .buttons .on{
+    background:#ff647c;
+}
+.arrow {
+    position: absolute;
+    top: 160px;
+    z-index: 2;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #eff;
+    background-color: RGBA(0, 0, 0, .3);
+}
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+#container:hover .arrow {
+    display: block;
+}
+#prev {
+    left: 20px;
+}
+#next {
+    right: 20px;
+}
+
+/*推荐模块*/
+#contentbox #focus{
+    width: 1100px;
+    margin: 0 auto;
+}
+#focus .title{
+    font-size: 20px;
+    color: #666;
+    padding:20px 0;
+}
+#focus .title span:nth-child(1){
+   font-weight: bolder;
+}
+#focus .title span:nth-child(2){
+    font-size: 17px;
+    margin-left: 10px;
+}
+#focus .tui_jian{
+    margin-top: 20px;
+}
+#focus .tui_jian:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#focus .tui_jian a{
+    float: left;
+    margin-right: -1px;
+    width: 219px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    margin-top: -1px;
+    color: #666;
+}
+#focus .tui_jian a img{
+    width: 220px;
+    height: 220px;
+}
+#focus .tui_jian a .g_name{
+    position: relative;
+    width: 200px;
+    line-height: 30px;
+    height: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #222;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 5px 15px 0;
+}
+#focus .tui_jian a .g_price{
+    line-height: 32px;
+    margin-top: 0;
+    margin-left: 15px;
+    color: #fa4b9b;
+    font-size: 20px;
+    font-family: '\5FAE\8F6F\96C5\9ED1',Arial;
+}
+
+/*今日特卖模块样式*/
+#contentbox #content{
+    width: 1100px;
+    margin: 0 auto;
+}
+#content .title{
+    font-size: 20px;
+    color: #666;
+    padding:20px 0;
+}
+#content .title span:nth-child(1){
+    font-weight: bolder;
+}
+#content .title span:nth-child(2){
+    border: 1px solid #666;
+    width: 2px;
+    height: 2px;
+    display: inline-block;
+    background: #666;
+    vertical-align: middle;
+    margin: 0 5px 0 2px;
+    overflow: hidden;
+}
+#content .layout{
+    margin-top: 20px;
+    overflow: hidden;
+}
+#content .layout .block{
+    margin-bottom: 15px;
+    padding: 6px 0;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;    
+}
+#content .layout .block a{
+    display:block;
+    position: relative;
+    float: left;
+    margin-left: 6px;
+    width: 750px;
+    height: 350px;
+    overflow: hidden;
+}
+#content .layout .block a i{
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 12px solid #fff;
+    border-bottom: 10px solid transparent;
+}
+#content .layout .block a #top2{
+    top:-30px;
+    height: 30px;
+}
+#content .layout .block a #top3{
+    top:-50px;
+    height: 50px;
+}
+#content .layout .block .rank{
+    float: right;
+    padding: 0 18px;
+    width: 306px;
+    height: 350px;
+    overflow: hidden;
+}
+#content .layout .block .rank a{
+    display: block;
+    width:306px;
+    height:117px;
+    margin-top: -1px;
+    padding: 18px 15px;
+    border-top: 1px dashed #c4c4c4;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #666;
+}
+#content .layout .block .rank .rank_img{
+    position: relative;
+    float: left;
+    margin-right: 12px;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #efefef;
+    overflow: hidden;
+}
+#content .layout .block .rank .rank_img img{
+    width: 100%;
+}
+#content .layout .block .rank .rank_img i{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 70px;
+    height: 10px;
+    line-height: 18px;
+    background: url(../img/top.png) no-repeat 0 0;
+    font-size: 11px;
+    color: #fff;
+    font-family: Verdana,Geneva,sans-serif;
+}
+#content .layout .block .rank .r{
+    float: none;
+    display: block;
+    overflow: hidden;
+    font-size: 13px;
+}
+#content .layout .block .rank .r .tit{
+    margin-top: 5px;
+    height: 38px;
+    line-height: 18px;
+    overflow: hidden;
+}
+#content .layout .block .rank a:hover{
+    color: #fa4b9b;
+}
+#content .layout .block .rank a:hover .rank_img img{
+    opacity:0.85;
+}
+#content .layout .block .rank .r .price{
+    margin-top: 15px;
+    line-height: 1;
+}
+#content .layout .block .rank .r .price .new{
+    margin-right: 5px;
+    font-size: 14px;
+    color: #fa4b9b;
+}
+#content .layout .block .rank .r .price .new em{
+    font-size: 18px;
+}
+#content .layout .block .rank .r .price .old{
+    text-decoration: line-through;
+    color: #999;
+    font-size: 12px;
+}
+
+#contentbox .bottom{
+    height:148px;
+    background:url(../img/bottom.png) no-repeat top left;
+}
+
+
+

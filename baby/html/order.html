@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>填写购物信息</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/cart.css">         
+    <link rel="stylesheet" type="text/css" href="../css/order.css">         
+
+    <!--<script src="../js/jquery-1.12.4.js"></script>-->
+    <script src="../lib/jquery/jquery-1.12.4.js"></script>
+    <!--<script type="text/javascript" src="../js/jquery.cookie.js"></script>-->
+    <script type="text/javascript" src="../lib/cookie/jquery.cookie.js"></script>
+	<!--<script type="text/javascript" src="../js/template-web.js"></script>-->
+	<script type="text/javascript" src="../lib/template/template-web.js"></script>
+    <script src="../js/common.js"></script>    
+    <!--<script src="../js/cart.js"></script>    -->
+    <script src="../js/order.js"></script>    
+</head>
+<body>
+    <div id="headerbox">
+        <header>
+            <ul>
+                <li>你好，欢迎来到母婴之家！</li>
+                <li><a href="zhuce.html#denglu">登录</a></li>
+                <li><a href="zhuce.html">免费注册</a></li>
+                <li><a href="">帮助中心</a></li>            
+            </ul>
+        </header>
+    </div>
+
+    <div id="topbox">
+        <div id="top">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo.png"></a>
+            </div>
+            <div class="top_right">
+                <ul class="step step2">
+                    <li class="current">1.我的购物车</li>
+                    <li class="current">2.填写核对订单信息</li>
+                    <li>3.成功提交订单</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkoutbox" style="background: #fff;">
+        <div id="checkout" >
+            <div class="title">填写并核对订单信息</div>
+            <div class="check1">
+                <div class="tit">
+                    收货人信息&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="checkerr" style="display: none;">请确认收货地址</span>
+                </div>
+                <div class="address">
+                    <div class="ad1">
+                        <div class="ad">
+                            <p class="name1">
+                                <strong class="tplNameN1">张三</strong>
+                                <span class="span1">收</span>
+                                <span class="moren" style="display:block">默认地址</span>
+                            </p>
+                            <p class="area"> 重庆市 重庆市  </p>
+                            <p class="adr1">沙坪坝区 虎溪镇 大学城东路20号</p>
+                            <p></p>
+                            <span class="phone">13983834363</span>
+                            <div class="editor" style="display:none;">
+                                <a href="javascript:void(0)" class="bianji">修改</a>
+                                <a href="javascript:void(0)" class="newdelete">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="addnewadress" style="font-size:12px; font-weight:normal; cursor:pointer">+新增收货地址</span>
+                <div class="clear"></div>
+                <!--新增地址-->
+                <div class="newadress">
+                    <div class="tit">收货人信息</div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr id="new_name">
+                                <td width="10%" align="right"><span>*</span> 收货人：</td>
+                                <td><input type="text" id="ship_name">&nbsp;<span id="new_name_error" style="display:none;">请您填写收货人姓名</span></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><span>*</span> 所在地区：</td>
+                                <td id="address_area">
+                                    <span id="span_province">
+                                        <select id="province"><option value="1">请选择</option></select>
+                                    </span>
+                                    <span id="span_city">
+                                        <select id="city"><option>请选择</option></select>
+                                    </span>
+                                    <span id="span_area">
+                                        <select id="area"><option>请选择</option></select>
+                                    </span>
+                                    <!--<span id="new_area_error" class="message">请您填写完整的地区信息</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" align="right"><span>*</span> 详细地址：</td>
+                                <td><input type="text" class="inp" id="ship_address_detail">&nbsp;<span id="new_address_error" style="display:none;">请您填写收货人详细地址</span></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><span >*</span> 手机号码：</td>
+                                <td><input type="text" class="inp" id="ship_mobile">&nbsp;<span id="new_mobile_error" class=" message" style="display:none;">请填写收货人手机号码</span></td>
+                            </tr>
+                            <tr>
+                                <td align="left">&nbsp;</td>
+                                <td align="left">
+                                    <div class="btn_02 save01" id="saveAddress" data-addid="0">保存收货人信息</div>
+                                    <div class="btn_02b save01" id="cancelAddress">取消</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--商品清单-->
+                <div class="Ntit1">商品清单</div>
+ 
+                <div class="c_menu">
+                    <div class="ci ci1">商品</div>
+                    <div class="ci ci2">颜色</div>                
+                    <div class="ci ci3">尺寸</div>
+                    <div class="ci ci4">单价</div>
+                    <div class="ci ci5">数量</div>
+                    <div class="ci ci6">小计</div>
+                </div>
+                <div id="goods">
+                    <!--<div class="c_list">
+                        <div class="c_img">
+                            <img src="../img/img3.jpg">
+                        </div>
+                        <div class="c_info">
+                                <div class="tz">
+                                    <img src="../img/btn_tz.png">
+                                </div>
+                            <p class="g_name">
+                                hugmii 儿童猴子动物空顶帽 猴子
+                            </p>
+                        </div>
+                        <div class="c_color">黄色</div>                
+                        <div class="c_size">S</div>
+                        <div class="c_price">￥18.00</div>
+                        <div class="c_amount">1</div>
+                        <div class="c_total"> ¥<em>18.00</em></div>
+                    </div>-->
+                    
+                </div>
+                <!--商品总计-->
+                <div class="order_count">
+                    <p><span class="count_amount">2</span>件商品，总商品金额：<span class="count_money">36.00</span></p>
+                    <p>运费：<span class="other_money">免运费</span></p>
+                    <p>应付总额：￥<span class="pay">36.00</span></p>
+                </div>
+                <div class="order_ad">
+                    <p>寄送至： <span class="last_ad"></span></p>
+                    <p>收件人：<span id="last_name"></span> <span id="last_phone"></span></p>
+                </div>
+            </div>
+
+            <div id="lastPart">
+                <a href="cart.html" class="ContinueToBuy">返回修改购物车</a>
+                <a href="" class="gotoSettlement yahei r" id="placeOrder">结算</a>                
+                <span class="pink">¥<span id="last_pay">39.00</span></span>
+                <span class="payTotol">应付总额：</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部开始 -->
+    <div class="bottom">
+		<div class="bottom1">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="">关于母婴之家</a></li>
+				<li><a href="">帮助中心</a></li>
+				<li><a href="">正品保障</a></li>
+				<li><a href="">关于母婴之家</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">正品保障</a></li>
+                <li><a href="">关于母婴之家</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">正品保障</a></li>
+			</ul>
+		</div>
+		<p>&copy;2017 母婴之家 All Rights Reserved. 客服热线：1010-8080</p>
+	</div>
+    <!-- 底部结束 -->
+    
+    <!-- 使用 artTemplate，定义显示购物车商品信息的模板 -->
+    <script type="text/html" id="productBuy_template">
+        <% for(var i = 0; i < prods.length; i++) { var p = prods[i]; %>
+            <div class="c_list">
+                <div class="c_img">
+                    <img src="<%=p.img%>">
+                </div>
+                <div class="c_info">
+                    <% if(p.tz == 1) {%>
+                        <div class="tz">
+                            <a href="<%=p.src%>"><img src="../img/btn_tz.png"></a>
+                        </div>
+                    <% } %>
+                    <p class="g_name"><%=p.name%></p>
+                </div>
+                <div class="c_color"><%=p.color%></div>                
+                <div class="c_size"><%=p.size%></div>
+                <div class="c_price">￥<em><%=p.price%></em></div>
+                <div class="c_amount"><%=p.amount%></div>
+                <div class="c_total"> ¥<em><%=p.amount*p.price%></em></div>
+            </div>
+        <% } %>            
+    </script>
+
+</body>
+</html>
